@@ -22,9 +22,11 @@ RUN set -ex; \
 
 RUN set -ex; \
     yum -q -y install \
+        cyrus-sasl-md5 \
         http://opensource.wandisco.com/centos/6/git/x86_64/wandisco-git-release-6-1.noarch.rpm \
         make \
         net-tools \
+        openldap-clients \
         openssl \
         procps-ng \
         psmisc \
@@ -44,11 +46,10 @@ RUN set -ex; \
     echo /usr/local/lib64/python2.6/site-packages >> /usr/lib/python2.6/site-packages/local.pth; \
     curl -sSL https://bootstrap.pypa.io/2.6/get-pip.py | python2.6 ; \
     pip2 --version; \
-    pip2 install "pytest<3.3" "py<1.5"; \
     rm -rf ~/.cache/; \
     yum clean all ; \
     :
 
-RUN yum makecache fast
-
 ENTRYPOINT ["/usr/local/sbin/tini", "-gw", "--"]
+ENV PIP_DISABLE_PIP_VERSION_CHECK 1
+ENV PIP_NO_PYTHON_VERSION_WARNING 1

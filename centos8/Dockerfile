@@ -25,9 +25,11 @@ RUN set -ex; \
 
 RUN set -ex; \
     yum -q -y install \
+        cyrus-sasl-md5 \
         git \
         make \
         net-tools \
+        openldap-clients \
         openssl \
         procps-ng \
         psmisc \
@@ -61,11 +63,11 @@ RUN set -ex; \
     pip2 install flake8 setuptools; \
     hash -r pip3 ; \
     pip3 --version; \
-    pip3 install flake8 pytest setuptools; \
+    pip3 install flake8 setuptools; \
     rm -rf ~/.cache/; \
     yum clean all ; \
     :
 
-RUN yum makecache
-
 ENTRYPOINT ["/usr/local/sbin/tini", "-gw", "--"]
+ENV PIP_DISABLE_PIP_VERSION_CHECK 1
+ENV PIP_NO_PYTHON_VERSION_WARNING 1
