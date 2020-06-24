@@ -62,7 +62,8 @@ RUN set -ex; \
     pip3 install flake8 pytest setuptools; \
     rm -rf ~/.cache/; \
     yum clean all ; \
-    yum makecache fast; \
     :
+
+RUN yum makecache fast
 
 ENTRYPOINT ["/usr/local/sbin/tini", "-gw", "--"]
