@@ -46,7 +46,6 @@ RUN set -ex; \
     echo /usr/local/lib64/python2.6/site-packages >> /usr/lib/python2.6/site-packages/local.pth; \
     curl -sSL https://bootstrap.pypa.io/2.6/get-pip.py | python2.6 ; \
     pip2 --version; \
-    pip2 install "pytest<3.3" "py<1.5"; \
     rm -rf ~/.cache/; \
     yum clean all ; \
     :

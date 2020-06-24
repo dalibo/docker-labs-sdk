@@ -63,7 +63,7 @@ RUN set -ex; \
     pip2 install flake8 setuptools; \
     hash -r pip3 ; \
     pip3 --version; \
-    pip3 install flake8 pytest setuptools; \
+    pip3 install flake8 setuptools; \
     rm -rf ~/.cache/; \
     yum clean all ; \
     :
