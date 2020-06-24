@@ -60,6 +60,7 @@ RUN set -ex; \
     hash -r pip3 ; \
     pip3 --version; \
     pip3 install flake8 pytest setuptools; \
+    rm -rf ~/.cache/; \
     yum clean all ; \
     yum makecache fast; \
     :
