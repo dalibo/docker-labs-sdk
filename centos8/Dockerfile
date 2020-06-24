@@ -43,7 +43,7 @@ RUN set -ex; \
     :
 
 RUN set -ex; \
-    curl -L https://github.com/koalaman/shellcheck/releases/download/stable/shellcheck-stable.linux.x86_64.tar.xz | tar -C /usr/local/bin -xJ shellcheck-stable/shellcheck ; \
+    curl -sSL https://github.com/koalaman/shellcheck/releases/download/stable/shellcheck-stable.linux.x86_64.tar.xz | tar -C /usr/local/bin -xJ shellcheck-stable/shellcheck ; \
     mv /usr/local/bin/shellcheck{-stable,} ; \
     chmod +x /usr/local/bin/shellcheck ; \
     useradd --system testuser; \
