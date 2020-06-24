@@ -50,8 +50,6 @@ RUN set -ex; \
     yum clean all ; \
     :
 
-RUN yum makecache fast
-
 ENTRYPOINT ["/usr/local/sbin/tini", "-gw", "--"]
 ENV PIP_DISABLE_PIP_VERSION_CHECK 1
 ENV PIP_NO_PYTHON_VERSION_WARNING 1
