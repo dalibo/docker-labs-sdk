@@ -10,7 +10,9 @@ RUN set -ex; \
         epel-release \
         https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm \
     ; \
+    yum-config-manager --enable pgdg13-updates-testing; \
     yum -q -y install \
+        postgresql13-server postgresql13-contrib \
         postgresql12-server postgresql12-contrib \
         postgresql11-server postgresql11-contrib \
         postgresql10-server postgresql10-contrib \
