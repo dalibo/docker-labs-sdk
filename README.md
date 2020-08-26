@@ -6,11 +6,12 @@ Buildpack image for development of PostgreSQL tooling:
 - Python3 & 2 with updated pip. Pip configured to use /usr/local. pytest and
   flake8 embedded.
 - CI tools : git, make, sudo, rsync, shellcheck, etc.
-- Distribution package tools : rpmbuild, yum-utils, etc.
+- Distribution package tools : fpm, rpmbuild, yum-utils, etc.
 
 
 ## Tags
 
+- `buster`.
 - `centos8`.
 - `centos7`.
 - `centos6`.
