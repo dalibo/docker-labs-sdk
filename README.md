@@ -12,6 +12,7 @@ Buildpack image for development of PostgreSQL tooling:
 ## Tags
 
 - `buster`.
+- `stretch`.
 - `centos8`.
 - `centos7`.
 - `centos6`.
