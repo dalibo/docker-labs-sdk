@@ -10,8 +10,6 @@ RUN set -ex; \
         epel-release \
         https://download.postgresql.org/pub/repos/yum/reporpms/EL-6-x86_64/pgdg-redhat-repo-latest.noarch.rpm \
     ; \
-    sed -i '/yum.testing.13/{n;s/^enabled=0/enabled=1/}' /etc/yum.repos.d/pgdg-redhat-all.repo; \
-    sed -i "/yum.testing.13/s/.releasever/$(grep -Po '6.\d+' /etc/redhat-release)/" /etc/yum.repos.d/pgdg-redhat-all.repo; \
     yum -q -y install \
         postgresql13-server postgresql13-contrib \
         postgresql12-server postgresql12-contrib \

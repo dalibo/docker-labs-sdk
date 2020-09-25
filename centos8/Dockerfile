@@ -13,7 +13,6 @@ RUN set -ex; \
     ; \
     yum config-manager --set-enabled PowerTools; \
     dnf -qy module disable postgresql; \
-    yum config-manager --enable pgdg13-updates-testing; \
     yum -qy install \
         postgresql13-server postgresql13-contrib \
         postgresql12-server postgresql12-contrib \
