@@ -23,6 +23,7 @@ RUN set -ex; \
 
 RUN set -ex; \
     yum -q -y install \
+        bats \
         cyrus-sasl-md5 \
         git \
         make \
