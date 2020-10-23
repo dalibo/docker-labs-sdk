@@ -23,6 +23,7 @@ RUN set -ex; \
 
 RUN set -ex; \
     yum -q -y install \
+        bats \
         cyrus-sasl-md5 \
         http://opensource.wandisco.com/centos/6/git/x86_64/wandisco-git-release-6-1.noarch.rpm \
         make \

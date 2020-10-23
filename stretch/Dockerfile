@@ -9,6 +9,7 @@ RUN set -ex; \
     echo "create_main_cluster = false" > /etc/postgresql-common/createcluster.d/no-main-cluster.conf; \
     apt-get update -y; \
     apt-get install -y --no-install-recommends \
+        bats \
         build-essential \
         lsb-release \
         postgresql-13 postgresql-client-13 \
