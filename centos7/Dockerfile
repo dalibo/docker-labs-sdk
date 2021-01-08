@@ -26,6 +26,7 @@ RUN set -ex; \
         bats \
         cyrus-sasl-md5 \
         git \
+        jq \
         make \
         net-tools \
         openldap-clients \
