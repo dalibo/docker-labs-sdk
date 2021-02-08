@@ -28,6 +28,7 @@ RUN set -ex; \
     yum -q -y install \
         cyrus-sasl-md5 \
         git \
+        jq \
         make \
         net-tools \
         openldap-clients \

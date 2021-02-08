@@ -11,6 +11,7 @@ RUN set -ex; \
     apt-get install -y --no-install-recommends \
         bats \
         build-essential \
+        jq \
         lsb-release \
         postgresql-13 postgresql-client-13 \
         postgresql-12 postgresql-client-12 \
