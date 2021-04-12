@@ -53,18 +53,14 @@ RUN set -ex; \
 
 
 RUN set -ex; \
-    yum -q -y install python2-pip python3-pip ; \
     echo /usr/local/lib/python2.7/site-packages >> /usr/lib/python2.7/site-packages/local.pth; \
     echo /usr/local/lib64/python2.7/site-packages >> /usr/lib/python2.7/site-packages/local.pth; \
-    pip2 install -I --prefix /usr/local --upgrade pip; \
-    pip3 install -I --prefix /usr/local --upgrade pip; \
-    yum -q -y remove python2-pip ; \
-    hash -r pip2 ; \
+    curl -sSL https://bootstrap.pypa.io/pip/2.7/get-pip.py | python2 ; \
     pip2 --version; \
-    pip2 install flake8 setuptools; \
-    hash -r pip3 ; \
+    pip2 install flake8; \
+    curl -sSL https://bootstrap.pypa.io/pip/get-pip.py | python3 ; \
     pip3 --version; \
-    pip3 install flake8 setuptools; \
+    pip3 install flake8; \
     rm -rf ~/.cache/; \
     yum clean all ; \
     :
