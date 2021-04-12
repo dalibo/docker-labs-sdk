@@ -47,7 +47,7 @@ RUN useradd --system testuser
 RUN set -ex; \
     echo /usr/local/lib/python2.6/site-packages >> /usr/lib/python2.6/site-packages/local.pth; \
     echo /usr/local/lib64/python2.6/site-packages >> /usr/lib/python2.6/site-packages/local.pth; \
-    curl -sSL https://bootstrap.pypa.io/2.6/get-pip.py | python2.6 ; \
+    curl -sSL https://bootstrap.pypa.io/pip/2.6/get-pip.py | python2.6 ; \
     pip2 --version; \
     rm -rf ~/.cache/; \
     yum clean all ; \
