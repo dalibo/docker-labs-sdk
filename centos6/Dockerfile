@@ -50,7 +50,9 @@ RUN useradd --system testuser
 RUN set -ex; \
     echo /usr/local/lib/python2.6/site-packages >> /usr/lib/python2.6/site-packages/local.pth; \
     echo /usr/local/lib64/python2.6/site-packages >> /usr/lib/python2.6/site-packages/local.pth; \
-    curl -sSL https://bootstrap.pypa.io/pip/2.6/get-pip.py | python2.6 ; \
+    yum -q -y install python-pip ; \
+    pip2 install --ignore-installed https://files.pythonhosted.org/packages/c4/44/e6b8056b6c8f2bfd1445cc9990f478930d8e3459e9dbf5b8e2d2922d64d3/pip-9.0.3.tar.gz ; \
+    pip2 install wheel ; \
     pip2 --version; \
     rm -rf ~/.cache/; \
     yum clean all ; \
