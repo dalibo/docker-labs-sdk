@@ -11,7 +11,7 @@ RUN set -ex; \
         epel-release \
         https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm \
     ; \
-    yum config-manager --set-enabled PowerTools; \
+    yum config-manager --set-enabled powertools; \
     dnf -qy module disable postgresql; \
     yum -qy install \
         postgresql13-server postgresql13-contrib \
