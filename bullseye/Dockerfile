@@ -53,7 +53,7 @@ RUN set -ex; \
         virtualenv-tools \
     ; \
     curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 - ; \
-    /bin/echo -e '\nPATH=$PATH:$HOME/.poetry/bin' >> ~/.bashrc ; \
+    ln -s ~/.poetry/bin/poetry /usr/local/bin/poetry ; \
     rm -rf ~/.cache; \
     :
 
