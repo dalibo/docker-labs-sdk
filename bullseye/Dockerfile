@@ -54,6 +54,7 @@ RUN set -ex; \
     ; \
     curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 - ; \
     ln -s ~/.poetry/bin/poetry /usr/local/bin/poetry ; \
+    poetry --version ; \
     rm -rf ~/.cache; \
     :
 
